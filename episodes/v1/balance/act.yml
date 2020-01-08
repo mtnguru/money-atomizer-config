@@ -1,0 +1,111 @@
+===== filename balance/module ============= 
+act:
+  id: finance-game-1
+  title: The Balance Sheet
+  scenes:
+    balance-sheet-lecturette
+    balance-sheet-trans1
+    balance-sheet-trans2
+    balance-sheet-trans3
+    balance-sheet-trans4
+    balance-sheet-trans5
+
+scenes:
+  balance-sheet-lecturette
+    set: video-player
+    title: The Balance Sheet
+    steps:
+      play-video:
+        type: video
+        filename: balance-sheet-lecturette.mp4
+
+  balance-sheet-trans1
+    set: game-board
+    title: Initial Bank Loan
+    steps:
+      select-transaction-card:
+        type: audio
+        audio: balance/audio/click-transaction.mp3
+          label: Click on transaction card
+        buttons:
+          transaction-card:
+            action: next-step 
+      show-money-balance:
+        type: function
+        function: verify-balance-sheet
+          valid-fields:
+            cash:
+              amount: $cash-amount
+            notes-payable:
+              amount: $notes-payable-amount
+          invalid-fields:
+            accounts-receivable:
+              hint:
+                audio:
+                  filename: invalid-asset-field.mp3
+            inventory:
+              hint:
+                audio:
+                  filename: invalid-asset-field.mp3
+            investments:
+              hint:
+                audio:
+                  filename: invalid-asset-field.mp3
+            equipment:
+              hint:
+                audio:
+                  filename: invalid-asset-field.mp3
+            accounts-payable:
+              hint:
+                audio:
+                filename: invalid-bank-loan-accounts-payable.mp3
+            common-stock:
+              hint:
+                audio:
+                  filename: invalid-bank-loan-common-stock.mp3
+            original-investment:
+              hint:
+                audio:
+                  filename: invalid-bank-loan-original-investment.mp3
+            retained-earnings:
+              hint:
+                audio:
+                  filename: invalid-bank-loan-retained-earnings.mp3
+            earnings-so-far:
+              hint:
+                audio:
+                  filename: invalid-bank-loan-earnings-so-far.mp3
+  
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+
+cars[0] = ['red', v6, 4wd, 'chevy']
+
+cars[0][0] = 'red'
+
+cars['chevy'] = ['red', v6, 4wd]
+
+cars:
+  chevy: 
+    color: red
+    engine: v6
+    drive: 4wd
+  ford: ['red', v6, 4wd, 'chevy']
+    color: blue
+    engine: v8
+    drive: 2wd
+
+    
+
+

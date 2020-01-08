@@ -1,0 +1,20 @@
+name: hydrogen
+position: {x: 0, y: 0, z: 0}
+rotation: {x: 0, y: 0, z: 0}
+allowmove: false
+geoGroups:
+  protons:
+    allowrotate: false
+    components:
+      framework:
+        volume: true
+        shape: line
+        scale: 2.05
+        nelectrons: true
+        protons:
+          P0:
+            pairs: default
+          P1:
+            pairs: default
+          P2:
+            pairs: default

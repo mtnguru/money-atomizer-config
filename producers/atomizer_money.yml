@@ -1,0 +1,15 @@
+name: The Money Game Builder
+defaultView: default
+themeDirectory: config/themes/money
+animateDirectory: config/animations/money
+controlFile: controls_money.yml
+atomizerId: money
+classes: [az-overlay-controls]
+libraries: [atomizer/atomizer-obfuscator, atomizer/atomizer-money-obfuscator]
+librariesDev: [atomizer/atomizer-base, atomizer/atomizer-money]
+windowRatio: .75
+views:
+  default:
+    name: The Money Game
+    producer: prod_episode
+    defaultTheme: default

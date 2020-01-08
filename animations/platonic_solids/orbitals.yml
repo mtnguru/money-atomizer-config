@@ -1,0 +1,16 @@
+name: Loop Structure
+animations:
+  rotation:
+    name: orbitals
+    speed: .07
+timers:
+  loop:
+    - {time: 3000, steps: 40, parms: {proton--scale:   [.25,1]}}
+    - {time: 3000, steps: 1}
+    - {time: 2000, steps: 40, parms: {proton--opacity: [1,0]}}
+    - {time: 3000, steps: 1}
+    - {time: 2000, steps: 40, parms: {proton--opacity: [0,1]}}
+    - {time: 3000, steps: 1}
+    - {time: 3000, steps: 40, parms: {proton--scale:   [1,.25]}}
+    - {time: 3000, steps: 1}
+       

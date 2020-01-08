@@ -1,0 +1,65 @@
+act:
+  id: finance-game-1
+  title: The Finance Game - Introduction
+  firstScene: 2
+  scenes:
+    start:
+      set:
+        type: node-popup
+        cssId: introduction
+        cssClass: introduction
+      title: Introduction to the Finance Game
+      steps:
+        display-start-screen:
+          type: render-node
+          view-mode: game_popup
+          nid: 12
+          container: .money-container .az-popup
+          buttons:
+            button-start:
+              action: next
+
+    introduction:
+      set:
+        type: node-popup
+        cssId: introduction-video
+        cssClass: introduction
+      title: Introduction Video
+      steps:
+        play-video:
+          type: render-node
+          view-mode: game_popup
+          nid: 13
+          container: .money-container .az-popup
+          buttons:
+            button-continue:
+              action: next
+
+    survey-form:
+      set:
+        type: node-popup
+        cssId: introduction-survey
+        cssClass: introduction
+      title: Pre course survey
+      steps:
+        form:
+          type: webform
+          form-name: finance_survey
+          container: .money-container .az-popup
+#         buttons:
+#           webform-button--submit:
+#             label: Finish
+#             action: submit
+        results:
+          title: Pre course survey results
+          type: function
+          function: verify-form
+          buttons:
+            continue:
+              label: Continue
+              action: next-step
+      buttons:
+        suspend:
+          label: Suspend Game
+          action: suspend
+
